@@ -32,19 +32,20 @@ const TodoList = () => {
     
     
     return (
-        <div>
+        <div className="col-sm-12 my-auto">
             <h1> Todos List</h1>
                 <div>{todos.map((item,index) => {
                     return (
                         <div key={index}>
-                        <p>{item.title}</p>
-                        <p>{item.body}</p>
-                        <button onClick={() =>
+                        <p><span style={{fontWeight:'bold'}}>Title:</span> <br/>{item.title}</p> 
+                        <p><span style={{fontWeight:'bold'}}>Body:</span><br/>{item.body}</p>
+                        <button  className="btn btn-block text-uppercase text-light bg-dark  mt-3 mb-3" onClick={() =>
                                 delete_todo(item._id)
                               }> Delete Todo
                               
                         </button>
-                      <Link to={`/todos/${item._id}`}><button>
+                        <p><input type='checkbox' />Done</p>
+                      <Link to={`/todos/${item._id}`}><button className="btn btn-block text-uppercase text-light bg-dark  mt-3 mb-3">
                             Edit Todo
                         </button>
                         </Link>  

@@ -40,19 +40,22 @@ import axios from 'axios'
 
   render() {
     return (
-      <div>
-        <hr />
+      <div className="col-sm-12 my-auto">
+      <div className='col-sm-12 h-100 d-table'>
+      <div className="card-container col-md-12 text-center card card-block " style={{ height: '40vh' }}>
         <h3>Edit form</h3>
-        <form onSubmit={this.handleFormSubmit}>
+        <form  className="form-group col-sm-12 d-table" onSubmit={this.handleFormSubmit}>
           <label>Title:</label>
           <input
+            className="form-control px-3" id="formGroupExampleInput"
             type="text"
             name="title"
             value={this.state.title}
             onChange={e => this.handleChange(e)}
           />
-          <label>body:</label>
+          <label>Body:</label>
           <textarea
+             className="form-control" id="formGroupExampleInput"
             name="body"
             value={this.state.body}
             onChange={e => this.handleChange(e)}
@@ -60,7 +63,9 @@ import axios from 'axios'
 
           <input type="submit" value="Submit" />
         </form>
+        </div>
       </div>
+    </div>
     );
   }
 }

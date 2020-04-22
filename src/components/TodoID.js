@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import EditTodo from './EditTodo';
 
 
@@ -36,20 +36,18 @@ class TodoID extends Component {
             return <EditTodo toDo={this.state} getTodo={this.getOneToDo} {...this.props} />
         }
     }
-  
-    render() {  
+
+    render() {
         return (
             <div>
                 <h1>{this.state.title}</h1>
                 <p>{this.state.description}</p>
-                
+
                 <div>{this.editForm()} </div>
                 <br />
-                
 
-                
 
-                <Link to={'/allTodos'}>Back to Todos</Link>
+                <Link to={'/'}>Back to Todos</Link>
             </div>
         )
     }

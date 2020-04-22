@@ -10,21 +10,21 @@ class apiService {
     return this.getTodos.get('/todos')
   }
 
-get_todo_(id){
+  get_todo_(id) {
     return this.getTodos.get(`/todos/${id}`)
-}
+  }
 
-create_todo(){
+  create_todo() {
     return this.getTodos.post('/todos')
-}
+  }
 
-update_todo(id){
+  update_todo(id) {
     return this.getTodos.put(`/todos/${id}`)
-}
+  }
 
-delete_todo(id){
+  delete_todo(id) {
     return this.getTodos.delete(`/todos/${id}`)
-}
+  }
 
 
 }
